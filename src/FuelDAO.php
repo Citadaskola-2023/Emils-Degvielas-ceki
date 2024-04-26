@@ -2,7 +2,7 @@
 
 namespace App;
 
-class FuelReceiptDTO
+class FuelDAO
 {
 
 }
