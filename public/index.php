@@ -1,3 +1,22 @@
+<?php
+
+use App\FuelDAO;
+use App\FuelReceiptDTO;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $receipt = new \App\FuelReceiptDTO;
+    licenseplate: $_POST['license_plate'],
+    datetime: $_POST['date_time'],
+    odometer: $_POST['odometer'],
+    petrolstation: $_POST['petrol_station'],
+    fueltype: $_POST['fuel_type'],
+    fuelprice: $_POST['fuel_price'],
+    refueled: $_POST['refueled'],
+    total: $_POST['total'],
+    currency: $_POST['currency'],
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,8 +81,10 @@
     <form action="process.php" method="post">
         License Plate:     <input type="text" name="license_plate"><br>
         Date and Time:     <input type="datetime-local" name="date_time"><br>
+        Odometer           <input type="odometer" name="odometer"><br>
         Petrol Station:    <input type="text" name="petrol_station"><br>
         Fuel Type:         <input type="text" name="fuel_type"><br>
+        Fuel Price:        <input type="text" name="fuel_price"><br>
         Refueled (liters): <input type="number" name="refueled"><br>
         Total (currency):  <input type="number" name="total"><br>
         Currency:          <select name="currency">
@@ -92,4 +113,6 @@ Fuel Price:                <input type="number" step="0.01" name="fuel_price"><b
     <input type="submit" value="Submit"> </form>
   </body>
 </html>
+
+
 
