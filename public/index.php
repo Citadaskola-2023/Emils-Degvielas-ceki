@@ -1,22 +1,4 @@
-<?php
 
-use App\FuelDAO;
-use App\FuelReceiptDTO;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $receipt = new \App\FuelReceiptDTO;
-    licenseplate: $_POST['license_plate'],
-    datetime: $_POST['date_time'],
-    odometer: $_POST['odometer'],
-    petrolstation: $_POST['petrol_station'],
-    fueltype: $_POST['fuel_type'],
-    fuelprice: $_POST['fuel_price'],
-    refueled: $_POST['refueled'],
-    total: $_POST['total'],
-    currency: $_POST['currency'],
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </head>
 
   <body>
-    <h1>Fuel Receipt Form</h1>
+    <!-- prompt: take this form and make it look nicer with tailwind css -->
+    <h1>Fuel Receipt Form xxx</h1>
     <form action="process.php" method="post">
         License Plate:     <input type="text" name="license_plate"><br>
         Date and Time:     <input type="datetime-local" name="date_time"><br>
